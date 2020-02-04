@@ -1,0 +1,99 @@
+{% extends "base/base.html" %}
+{% load static %}
+{%block content%}
+        <h1>Match Details</h1>
+        <ul>
+            {%if day_1%}
+            <h2>First Day</h2>
+            {% for teams in day_1 %}
+
+                <li><a href="{{ teams.get_absolute_url }}">{{ teams.team_name }}</a></li>
+            {% endfor %}
+            {%endif%}
+
+            {%if day_2%}
+            <h2>Second Day</h2>
+            {% for teams in day_2 %}
+                <li><a href="{{ teams.get_absolute_url }}">{{ teams.team_name }}</a></li>
+
+            {% endfor %}
+            {%endif%}
+
+            {%if day_3%}
+            <h2>Third Day</h2>
+            {% for teams in day_3 %}
+                <li><a href="{{ teams.get_absolute_url }}">{{ teams.team_name }}</a></li>
+
+            {% endfor %}
+            {%endif%}
+
+            {%if day_4%}
+            <h2>Forth Day</h2>
+            {% for teams in day_4 %}
+                <li><a href="{{ teams.get_absolute_url }}">{{ teams.team_name }}</a></li>
+
+            {% endfor %}
+            {%endif%}
+
+            {%if day_5%}
+            <h2>Fifth Day</h2>
+            {% for teams in day_5 %}
+                <li><a href="{{ teams.get_absolute_url }}">{{ teams.team_name }}</a></li>
+
+            {% endfor %}
+            {%endif%}
+
+            {%if day_6%}
+            <h2>Sixth Day</h2>
+            {% for teams in day_6 %}
+                <li><a href="{{ teams.get_absolute_url }}">{{ teams.team_name }}</a></li>
+
+            {% endfor %}
+            {%endif%}
+
+            {%if day_7%}
+            <h2>Seventh Day</h2>
+            {% for teams in day_7 %}
+                <li><a href="{{ teams.get_absolute_url }}">{{ teams.team_name }}</a></li>
+
+            {% endfor %}
+            {%endif%}
+
+            {%if day_8%}
+            <h2>Eighth Day</h2>
+            {% for teams in day_8 %}
+                <li><a href="{{ teams.get_absolute_url }}">{{ teams.team_name }}</a></li>
+
+            {% endfor %}
+            {%endif%}
+
+            {%if day_9%}
+             <h2>Ninth Day</h2>
+            {% for teams in day_9 %}
+                <li><a href="{{ teams.get_absolute_url }}">{{ teams.team_name }}</a></li>
+            {% endfor %}
+            {%endif%}
+
+            {%if day_10%}
+             <h2>Tenth Day</h2>
+            {% for teams in day_10 %}
+                <li><a href="{{ teams.get_absolute_url }}">{{ teams.team_name }}</a></li>
+
+            {% endfor %}
+            {%endif%}
+
+                 <h2>Semi final Match</h2>
+            {% for teams in semi_final %}
+                <li><a href="{{ teams.get_absolute_url }}">{{ teams.team_name }}</a></li>
+            {% empty %}
+                <li>We will upload the details soon....</li>
+            {% endfor %}
+                 <h2>Grand Final</h2>
+            {% for teams in final %}
+                <li><a href="{{ teams.get_absolute_url }}">{{ teams.team_name }}</a></li>
+            {% empty %}
+                <li>We will upload the details soon....</li>
+            {% endfor %}
+
+        </ul>
+{%endblock%}

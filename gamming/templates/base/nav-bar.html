@@ -1,0 +1,59 @@
+{% url 'home:home' as home_url %}
+{% url 'home:contact' as contact_url %}
+{% url 'home:register' as register_url %}
+{% url 'home:registered-teams' as registered_teams_url %}
+{% url 'home:match-date' as match_date_url %}
+{% url 'home:verified-teams' as verified_teams_url %}
+{% url 'home:qualified-teams' as qualified_teams_url %}
+{% url 'live:youtube' as youtube_url %}
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3" >
+   <div class='container'>
+  <a class="navbar-brand" href="{{ home_url }}">
+    <img src="//getbootstrap.com/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+    {% if brand_name %} {{brand_name }} {% else %}THE-MAD-PYRATES {% endif %}
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item {% if request.path == home_url %}active{% endif %}">
+        <a class="nav-link" href="{{ home_url }}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item {% if request.path == contact_url %}active{% endif %}">
+        <a class="nav-link" href="{{ contact_url }}">Contact</a>
+      </li>
+      <li class="nav-item {% if request.path == register_url %}active{% endif %}">
+        <a class="nav-link" href="{{ register_url }}">REGISTER</a>
+      </li>
+          <li class="nav-item {% if request.path == youtube_url %}active{% endif %}">
+        <a class="nav-link" href="{{ youtube_url }}">Live</a>
+      </li>
+
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Match Details
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{{match_date_url}}">Match Date</a>
+          <a class="dropdown-item" href="{{registered_teams_url}}">Teams Registered</a>
+          <a class="dropdown-item" href="{{verified_teams_url}}">Teams verified</a>
+            <a class="dropdown-item" href="{{qualified_teams_url}}">Teams Qualified</a>
+
+
+        </div>
+      </li>
+
+      <li class="nav-item {% if request.path == cart_url %}active{% endif %}">
+        <a class="nav-link" href="{{ cart_url }}"><span class='navbar-cart-count'>{{ request.session.cart_items }}</span> <i class="fas fa-skull fa-sm fa-spin"></i></a>
+      </li>
+
+      {% include 'search/snippets/search-form.html' %}
+
+    </ul>
+  </div>
+</div>
+</nav>

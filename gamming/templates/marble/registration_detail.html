@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+{%load static%}
+
+
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		{%include 'marble/base/head.html'%}
+
+	</head>
+	<body>
+	<div id="fh5co-page">
+		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+		{%include 'marble/base/navbar.html'%}
+		<div id="fh5co-main">
+			<div class="fh5co-narrow-content">
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+						{%if object.team_image%}
+						<img class="img-responsive" src="{{object.team_image.url}}" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
+						{%else%}
+						<img class="img-responsive" src="{% static 'images/pubg-4.jpg' %}" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
+						{%endif%}
+					</div>
+					<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+<!--						<h2 class="fh5co-heading">Team Details</h2>-->
+                        {% include 'marble/base/detail_card.html' with object=object %}
+					</div>
+				</div>
+			</div>
+
+			{%include 'marble/base/match.html'%}
+
+			<div class="fh5co-narrow-content">
+				<div class="row">
+					<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+						<h1 class="fh5co-heading-colored">Thank you</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+						<p class="fh5co-lead">This gaming is officially conducted by The Madpirate's.</p>
+						<p><a href="#" class="btn btn-primary">The madpirate's</a></p>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	{%include 'marble/base/scripts.html'%}
+
+	</body>
+</html>
+

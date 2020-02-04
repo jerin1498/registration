@@ -1,0 +1,14 @@
+{% extends "base/base.html" %}
+{% load static %}
+{%block content%}
+    <h1>team names</h1>
+<ol>
+{% for registration in object_list %}
+ {% include 'base/list_card.html' with instance=registration %}
+{% empty %}
+    <li>No registration yet.</li>
+{% endfor %}
+{{name}}
+</ol>
+
+{%endblock%}

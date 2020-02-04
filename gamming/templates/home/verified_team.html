@@ -1,0 +1,16 @@
+{% extends "base/base.html" %}
+{%block content%}
+{% url 'home:contact' as contact_url %}
+        <h1> VERIFIED TEAMS </h1>
+<ol>
+     <h2>These teams are eligible for 'THE-MAD-PIRATE' PUBG Tournament  </h2>
+    <p>Teams not got verified please <a href="{{contact_url}}">contact</a>  </p>
+    {% for teams in verified %}
+        {% include 'base/list_card.html' with instance=teams %}
+    {% empty %}
+        <li>We will upload the details soon....</li>
+    {% endfor %}
+</ol>
+
+<p>Teams not got verified please <a href="{{contact_url}}">contact</a>  </p>
+{%endblock%}

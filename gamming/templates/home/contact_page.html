@@ -1,0 +1,19 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block content%}
+        <h2>OWNER <a href="{{link.owner_instagram_link}}">{{link.owner_name}}</a></h2>
+
+        <h3>contact number : {{link.owner_contact_number}}</h3>
+
+        <br>
+
+        <h2>MANAGER <a href="{{link.manager_instagram_link}}">{{link.manager_name}}</a></h2>
+        <h3>contact number : {{link.manager_contact_number}}</h3>
+
+        <br>
+
+        <h4>Do you want to <a href="{{link.whats_app_group_link}}">JOIN</a> our whatapp group</h4>
+        <br>
+        <h4>follow us on <a href="{{link.madpyrate_link}}">instagram</a> </h4>
+{%endblock%}

@@ -1,0 +1,59 @@
+{%load static%}
+
+{%url 'home:registered-teams' as registered_teams_url%}
+{%url 'home:qualified-teams' as qualified_teamsurl%}
+{%url 'home:verified-teams' as verified_teams_url%}
+{%url 'home:match-date' as match_date_url%}
+
+			<div class="fh5co-narrow-content" style="">
+					<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Match</h2>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+								<div class="fh5co-icon">
+									<a href="{{registered_teams_url}}"><i class="icon-settings"></i></a>
+								</div>
+								<div class="fh5co-text">
+									<a href="{{registered_teams_url}}"><h3>Registered Teams</h3></a>
+									<p>view all registered teams in this tournament . </p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+								<div class="fh5co-icon">
+									<a href="{{verified_teams_url}}"><i class="icon-search4"></i></a>
+								</div>
+								<div class="fh5co-text">
+									<a href="{{verified_teams_url}}"><h3>Verified Teams</h3></a>
+									<p>Teams verified by the admin. </p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+								<div class="fh5co-icon">
+									<a href="{{qualified_teamsurl}}"><i class="icon-paperplane"></i></a>
+								</div>
+								<div class="fh5co-text">
+									<a href="{{qualified_teamsurl}}"><h3>Qualified Teams</h3></a>
+									<p>Teams got qualified for next battle. </p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+								<div class="fh5co-icon">
+									<a href="{{match_date_url}}"><i class="icon-params"></i></a>
+								</div>
+								<div class="fh5co-text">
+									<a href="{{match_date_url}}"><h3>Match Fixtures</h3></a>
+									<p>match dates. </p>
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+				</div>

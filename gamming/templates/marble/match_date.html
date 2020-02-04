@@ -1,0 +1,350 @@
+
+<!DOCTYPE html>
+{%load static%}
+
+
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		{%include 'marble/base/head.html'%}
+
+	</head>
+	<body>
+	<div id="fh5co-page">
+		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+		{%include 'marble/base/navbar.html' %}
+
+		<div id="fh5co-main">
+			{%if day_1%}
+			<div class="fh5co-narrow-content">
+				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Match Date</h2>
+				<h3>First Day</h3>
+				{% for teams in day_1%}
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+							{%if teams.team_image%}
+							<a href="{{teams.get_absolute_url}}" class="blog-img"><img src="{{ teams.team_image.url}}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							{%else%}
+							<a href="{{teams.get_absolute_url}}" class="blog-img"><img src="{% static 'images/pubg-4.jpg' %}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							{%endif%}
+							<div class="desc">
+								<h3><a href="#">{{teams.team_name}}</a></h3>
+								<span><small>by Admin </small> / <small> Abishon </small> / <small> <i class="icon-comment"></i> Shibu</small></span>
+								<p>{{teams.name}} </p>
+								<a href="{{teams.get_absolute_url}}" class="lead">Team Detail <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+					{%endfor%}
+				</div>
+			</div>
+			{%endif%}
+
+
+
+			{%if day_2%}
+			<div class="fh5co-narrow-content">
+				<h3>Second Day</h3>
+				{% for teams in day_2%}
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+							{%if teams.team_image%}
+							<a href="{{teams.get_absolute_url}}" class="blog-img"><img src="{{teams.team_image.url}}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							{%else%}
+							<a href="{{teams.get_absolute_url}}" class="blog-img"><img src="{% static 'images/pubg-4.jpg' %}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							{%endif%}
+							<div class="desc">
+								<h3><a href="#">{{teams.team_name}}</a></h3>
+								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
+								<p>{{teams.name}}</p>
+								<a href="{{teams.get_absolute_url}}" class="lead">Team Detail <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+					{%endfor%}
+				</div>
+			</div>
+			{%endif%}
+
+
+			{%if day_3%}
+			<div class="fh5co-narrow-content">
+				<h3>Third Day</h3>
+				{% for teams in day_3%}
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+							{%if teams.team_image%}
+							<a href="{{teams.get_absolute_url}}" class="blog-img"><img src="{{teams.team_image.url}}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							{%else%}
+							<a href="{{teams.get_absolute_url}}" class="blog-img"><img src="{% static 'images/pubg-4.jpg' %}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							{%endif%}
+							<div class="desc">
+								<h3><a href="#">{{teams.name}}</a></h3>
+								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
+								<p>{{teams.team_name}}</p>
+								<a href="{{teams.get_absolute_url}}" class="lead">Team Detail <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+					{%endfor%}
+				</div>
+			</div>
+			{%endif%}
+
+			{%if day_4%}
+			<div class="fh5co-narrow-content">
+				<h3>Forth Day</h3>
+				{% for teams in day_4%}
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+							{%if teams.team_image%}
+							<a href="{{teams.get_absolute_url}}" class="blog-img"><img src="{{teams.team_image.url}}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							{%else%}
+							<a href="{{teams.get_absolute_url}}" class="blog-img"><img src="{% static 'images/pubg-4.jpg' %}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							{%endif%}
+							<div class="desc">
+								<h3><a href="#">{{teams.name}}</a></h3>
+								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
+								<p>{{teams.team_name}}</p>
+								<a href="{{teams.get_absolute_url}}" class="lead">Team Detail <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+					{%endfor%}
+				</div>
+			</div>
+			{%endif%}
+
+			{%if day_5%}
+			<div class="fh5co-narrow-content">
+				<h3>Fifth Day</h3>
+				{% for teams in day_5%}
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+							{%if teams.team_image%}
+							<a href="{{teams.get_absolute_url}}" class="blog-img"><img src="{{teams.team_image.url}}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							{%else%}
+							<a href="{{teams.get_absolute_url}}" class="blog-img"><img src="{% static 'images/pubg-4.jpg' %}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							{%endif%}
+							<div class="desc">
+								<h3><a href="#">{{teams.name}}</a></h3>
+								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
+								<p>{{teams.team_name}}</p>
+								<a href="{{teams.get_absolute_url}}" class="lead">Team Detail <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+					{%endfor%}
+				</div>
+			</div>
+			{%endif%}
+
+			{%if day_6%}
+			<div class="fh5co-narrow-content">
+				<h3>Sixth Day</h3>
+				{% for teams in day_6%}
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+							{%if teams.team_image%}
+							<a href="{{teams.get_absolute_url}}" class="blog-img"><img src="{{teams.team_image.url}}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							{%else%}
+							<a href="{{teams.get_absolute_url}}" class="blog-img"><img src="{% static 'images/pubg-4.jpg' %}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							{%endif%}
+							<div class="desc">
+								<h3><a href="#">{{teams.name}}</a></h3>
+								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
+								<p>{{teams.team_name}}</p>
+								<a href="{{teams.get_absolute_url}}" class="lead">Team Detail <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+					{%endfor%}
+				</div>
+			</div>
+			{%endif%}
+
+			{%if day_7%}
+			<div class="fh5co-narrow-content">
+				<h3>Seventh Day</h3>
+				{% for teams in day_7%}
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+							{%if teams.team_image%}
+							<a href="{{teams.get_absolute_url}}" class="blog-img"><img src="{{teams.team_image.url}}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							{%else%}
+							<a href="{{teams.get_absolute_url}}" class="blog-img"><img src="{% static 'images/pubg-4.jpg' %}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							{%endif%}
+							<div class="desc">
+								<h3><a href="#">{{teams.name}}</a></h3>
+								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
+								<p>{{teams.team_name}}</p>
+								<a href="{{teams.get_absolute_url}}" class="lead">Team Detail <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+					{%endfor%}
+				</div>
+			</div>
+			{%endif%}
+
+			{%if day_8%}
+			<div class="fh5co-narrow-content">
+				<h3>Eighth Day</h3>
+				{% for teams in day_8%}
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+							{%if teams.team_image%}
+							<a href="{{teams.get_absolute_url}}" class="blog-img"><img src="{{teams.team_image.url}}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							{%else%}
+							<a href="{{teams.get_absolute_url}}" class="blog-img"><img src="{% static 'images/pubg-4.jpg' %}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							{%endif%}
+							<div class="desc">
+								<h3><a href="#">{{teams.name}}</a></h3>
+								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
+								<p>{{teams.team_name}}</p>
+								<a href="{{teams.get_absolute_url}}" class="lead">Team Detail <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+					{%endfor%}
+				</div>
+			</div>
+			{%endif%}
+
+			{%if day_9%}
+			<div class="fh5co-narrow-content">
+				<h3>Ninth Day</h3>
+				{% for teams in day_9%}
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+							{%if teams.team_image%}
+							<a href="{{teams.get_absolute_url}}" class="blog-img"><img src="{{teams.team_image.url}}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							{%else%}
+							<a href="{{teams.get_absolute_url}}" class="blog-img"><img src="{% static 'images/pubg-4.jpg' %}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							{%endif%}
+							<div class="desc">
+								<h3><a href="#">{{teams.name}}</a></h3>
+								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
+								<p>{{teams.team_name}}</p>
+								<a href="{{teams.get_absolute_url}}" class="lead">Team Detail <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+					{%endfor%}
+				</div>
+			</div>
+			{%endif%}
+
+			{%if day_10%}
+			<div class="fh5co-narrow-content">
+				<h3>Tenth  Day</h3>
+				{% for teams in day_10%}
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+							{%if teams.team_image%}
+							<a href="{{teams.get_absolute_url}}" class="blog-img"><img src="{{teams.team_image.url}}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							{%else%}
+							<a href="{{teams.get_absolute_url}}" class="blog-img"><img src="{% static 'images/pubg-4.jpg' %}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							{%endif%}
+							<div class="desc">
+								<h3><a href="#">{{teams.name}}</a></h3>
+								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
+								<p>{{teams.team_name}}</p>
+								<a href="{{teams.get_absolute_url}}" class="lead">Team Detail <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+					{%endfor%}
+				</div>
+			</div>
+			{%endif%}
+
+			{%if semi_final%}
+			<div class="fh5co-narrow-content">
+				<h3>Semi finals </h3>
+				{% for teams in semi_final%}
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+							{%if teams.team_image%}
+							<a href="{{teams.get_absolute_url}}" class="blog-img"><img src="{{teams.team_image.url}}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							{%else%}
+							<a href="{{teams.get_absolute_url}}" class="blog-img"><img src="{% static 'images/pubg-4.jpg' %}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							{%endif%}
+							<div class="desc">
+								<h3><a href="#">{{teams.name}}</a></h3>
+								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
+								<p>{{teams.team_name}}</p>
+								<a href="{{teams.get_absolute_url}}" class="lead">Team Detail <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+					{%endfor%}
+				</div>
+			</div>
+			{%endif%}
+
+
+			{%if final%}
+			<div class="fh5co-narrow-content">
+				<h3>Grand  Finals </h3>
+				{% for teams in final%}
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+							{%if teams.team_image%}
+							<a href="{{teams.get_absolute_url}}" class="blog-img"><img src="{{teams.team_image.url}}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							{%else%}
+							<a href="{{teams.get_absolute_url}}" class="blog-img"><img src="{% static 'images/pubg-4.jpg' %}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							{%endif%}
+							<div class="desc">
+								<h3><a href="#">{{teams.name}}</a></h3>
+								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
+								<p>{{teams.team_name}}</p>
+								<a href="{{teams.get_absolute_url}}" class="lead">Team Detail <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+					{%endfor%}
+				</div>
+			</div>
+			{%endif%}
+
+
+
+			<div id="get-in-touch">
+				<div class="fh5co-narrow-content">
+					<div class="row">
+						<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+							<h1 class="fh5co-heading-colored">Get in touch</h1>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<p class="fh5co-lead">support us.</p>
+							<p><a href="#" class="btn btn-primary">Learn More</a></p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+	</div>
+
+	{%include 'marble/base/scripts.html'%}
+
+	</body>
+</html>
+

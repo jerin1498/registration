@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+{%load static%}
+{%url 'home:match-date' as match_date_url%
+
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		{%include 'marble/base/head.html'%}
+
+	</head>
+	<body>
+	<div id="fh5co-page">
+		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+		{%include 'marble/base/navbar.html'%}
+
+		<div id="fh5co-main">
+			<div class="fh5co-narrow-content">
+				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft"> Verified Teams </h2>
+                     <h3>These teams are eligible for 'THE-MAD-PIRATE'  PUBG Tournament  </h3>
+                    <p>Teams got verified please check your match date <a href="{{match_date_url}}">match date</a>  </p>
+				<div class="row row-bottom-padded-md">
+                    {% for team in verified%}
+                    <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+                            {%if team.team_image%}
+							<a href="{{team.get_absolute_url}}" class="blog-img"><img src="{{team.team_image.url}}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+                            {%else%}
+                            <a href="{{team.get_absolute_url}}" class="blog-img"><img src="{% static 'images/pubg-4.jpg' %}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+                            {%endif%}
+							<div class="desc">
+								<h3><a href="{{team.get_absolute_url}}">{{team.team_name}}</a></h3>
+								<span><small>by Admin </small> / <small> Abishon </small> / <small> <i class="icon-comment"></i> Shibu</small></span>
+								<p> You'r team verified successfully, <a href="{{match_date_url}}">Check</a> match date </p>
+								<a href="{{team.get_absolute_url}}" class="lead">Team Detail <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+                    {%empty%}
+                    {%endfor%}
+
+
+                </div>
+			</div>
+
+			<div id="get-in-touch">
+				<div class="fh5co-narrow-content">
+					<div class="row">
+						<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+							<h1 class="fh5co-heading-colored">Get in touch</h1>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<p class="fh5co-lead">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+							<p><a href="#" class="btn btn-primary">Learn More</a></p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{%include 'marble/base/scripts.html'%}
+
+	</body>
+</html>
+

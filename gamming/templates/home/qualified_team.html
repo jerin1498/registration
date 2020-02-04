@@ -1,0 +1,17 @@
+{% extends "base/base.html" %}
+{% load static %}
+{%block content%}
+        <h1>   QUALIFIED  TEAMS </h1>
+
+<ol>
+    <H2>These teams are qualified for next battle </H2>
+    {% for teams in verified %}
+
+
+      {% include 'base/list_card.html' with instance=teams %}
+
+    {% empty %}
+        <li>We will upload the details soon....</li>
+    {% endfor %}
+</ol>
+{%endblock%}

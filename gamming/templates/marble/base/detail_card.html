@@ -1,0 +1,31 @@
+{%load static%}
+
+<div class="card" style="width: 30rem;">
+<!--    {%if object.team_image%}-->
+<!--        <img class="card-img-top" src="{{object.team_image.url}}" >-->
+<!--    {%else%}-->
+<!--    <img class="card-img-top" src="{% static 'pubg.jpg' %}"    >-->
+<!--    {%endif%}-->
+
+  <div class="card-body">
+    <h5 class="card-title">Team Name : <b>{{ object.team_name }}</b></h5>
+
+
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Player 1 :{{ object.player_1 }}</li>
+    <li class="list-group-item">player 1 pubg id : {{ object.player_1_pubg_id }}</li>
+    <li class="list-group-item">Player 2 :{{ object.player_2 }}</li>
+      <li class="list-group-item">player 2 pubg id : {{ object.player_2_pubg_id }}</li>
+          <li class="list-group-item">Player 3 : {{ object.player_3}}</li>
+    <li class="list-group-item">player 3 pubg id : {{ object.player_3_pubg_id }}</li>
+      <li class="list-group-item"> Player 4 : {{ object.player_4 }}</li>
+      <li class="list-group-item">player 4 pubg id : {{ object.player_4_pubg_id }}</li>
+        {%if object.team_position%}
+            <li class="list-group-item" >Team position : {{object.team_position}}</li>
+        {%endif%}
+  </ul>
+</div>
+
+
+

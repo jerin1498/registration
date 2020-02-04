@@ -1,0 +1,7 @@
+{% extends "base/base.html" %}
+{% load static %}
+{%block content%}
+<h1>Team Name : {{ object.team_name }}</h1>
+{% include 'base/detail_card.html' with object=object %}
+
+{%endblock%}

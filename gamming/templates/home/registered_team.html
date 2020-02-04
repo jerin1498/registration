@@ -1,0 +1,23 @@
+{% extends "base/base.html" %}
+{%block content%}
+{% load static %}
+{% url 'home:verified-teams' as verified_url %}
+{% url 'home:contact' as contact_url %}
+        <h1> REGISTERED TEAMS </h1>
+<ol>
+     <h2>These are the  teams registered.</h2>
+    <h2>Your team will be added to <a href="{{ verified_url }}">verified team list</a> soon, any way it will take a moment atleast three days from registered date </h2>
+    <br>
+    <p> Some teams may get kicked-off by the manager due to improper identifications.
+        If you team also get eliminated please contact <a href="{{ contact_url }}">THE-MAD-PYRATE </a>
+    </p>
+    {% for teams in registered %}
+
+        {% include 'base/list_card.html' with instance=teams %}
+
+
+    {% empty %}
+        <li>We will upload the details soon....</li>
+    {% endfor %}
+</ol>
+{%endblock%}

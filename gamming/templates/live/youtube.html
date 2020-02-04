@@ -1,0 +1,15 @@
+{%extends 'base/base.html'%}
+{%load static%}
+
+{%block content%}
+<h1> Welcome to live </h1>
+{%if live.youtube_link is none %}
+    <h2> live will available during match </h2>
+{%else%}
+<a href="{{live.youtube_link}}"><img src="{%static 'youtube.png'%}" alt=""></a>
+{%endif%}
+
+
+
+
+{%endblock%}

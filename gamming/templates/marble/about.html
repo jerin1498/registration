@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+{%load static%}
+{% url 'home:about' as about_url %}
+{% url 'home:contact' as contact_url %}
+{% url 'home:home' as index_url %}
+{% url 'home:portfolio' as portfolio_url %}
+{%url 'home:register' as register_url%}
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		{%include 'marble/base/head.html'%}
+	</head>
+	<body>
+	<div id="fh5co-page">
+		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+				<aside id="fh5co-aside" role="complementary" class="border js-fullheight" style="">
+
+			<h1 ><a href="{{index_url}}"><b><div style="font-family: 'Pinyon Script', cursive;">....The Madpirate's</div></b></a></h1>
+			<nav id="fh5co-main-menu" role="navigation">
+				<ul>
+					<li><a href="{{index_url}}">Home</a></li>
+					{%if link.registration%}
+					<li><a href="{{register_url}}">Register</a></li>
+					{%else%}
+					{%endif%}
+					<li><a href="{{portfolio_url}}">Portfolio</a></li>
+					<li class="fh5co-active"><a href="{{about_url}}">About</a></li>
+					<li><a href="{{contact_url}}">Contact</a></li>
+					{% include 'search/snippets/search-form.html' %}
+				</ul>
+			</nav>
+				{%include 'marble/base/account.html'%}
+
+		</aside>
+		<div id="fh5co-main" style="">
+			<div class="fh5co-narrow-content" style="">
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+						<img class="img-responsive" src="{%static 'images/mad.jpg'%}" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
+					</div>
+					<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft" style="">
+						<h2 class="fh5co-heading">About Company</h2>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Quisque sit amet efficitur nih. Interdum et malesuada fames ac ante ipsum primis in faucibus interda et malesuada parturient.</p>
+						<p>Quisque sit amet efficitur nih. Interdum et malesuada fames ac ante ipsum primis in faucibus interda et malesuada parturient.</p>
+					</div>
+				</div>
+			</div>
+
+			{%include 'marble/base/match.html'%}
+		
+			<div class="fh5co-narrow-content">
+				<div class="row">
+					<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+						<h1 class="fh5co-heading-colored">Thank you</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+						<p class="fh5co-lead">This gaming is officially conducted by The Madpirate's.</p>
+						<p><a href="#" class="btn btn-primary">The madpirate's</a></p>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{%include 'marble/base/scripts.html'%}
+
+	</body>
+</html>
+
